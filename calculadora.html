@@ -1,0 +1,72 @@
+
+ <html>
+ 
+ <link href="estilos.css" rel="stylesheet" />
+
+<input type = "text" name = "n1"/>
+
+<input type = "text" name = "n2"/>
+
+<button onclick="soma()">
+    +
+</button>
+
+<button onclick="tira()">
+    -
+</button>
+
+<button onclick="vezes()">
+    x
+</button>
+
+<button onclick="divide()">
+    /
+</button>
+
+<input type="text" name="res" readonly />
+
+
+<script>
+    function soma() {
+            let ns = gn()
+            let res = document.getElementsByName('res')[0]
+            res.value = Number(ns.n1) + Number(ns.n2)
+    
+    }
+
+
+function tira(){
+            let ns = gn()
+            let res = document.getElementsByName('res') [0]
+            res.value = Number(ns.n1) - Number(ns.n2)
+    
+    }
+
+function vezes() {
+            let ns = gn()
+            let res = document.getElementsByName('res') [0]
+            res.value = Number(ns.n1) * Number(ns.n2)
+    
+    }
+    
+function divide() {
+            let ns = gn()
+            let res = document.getElementsByName('res') [0]
+            res.value = Number(ns.n1) / Number(ns.n2)
+    
+    }
+
+function gn() {
+    return {
+        n1: document.getElementsByName('n1'),
+        n2: document.getElementsByName('n2')
+    }
+}
+
+</script>
+
+<img src="https://mega.ibxk.com.br/2014/04/25/25112153782127.jpg?ims=610x" >
+
+<a href="index.html"><img src="https://marcelosantosarte.com.br/wp-content/uploads/Produtos/Preview/Pintura/10-19-19-Preview-Flores-Aquarela.jpg"></a>
+
+</html>

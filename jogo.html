@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="estilos.css" rel="stylesheet" />
+    <link href="estilosdois.css" rel="stylesheet" />
+    <title>Jogo</title>
+</head>
+
+<bodY>
+    <h2>Jogo da sorte</h2>
+    <input type="number" id="es" min = "0" max = "100" onchange ="verificar()">
+    <button onclick="verificar()">OK</button>
+    <button onclick="window.location.reload()">RESET</button>
+
+
+    <img src="mais.webp" id="mais"></img>
+    <img src="menos.png" id="menos"></img>
+    <img src="perfeito.webp" id="perfeito"></img>
+
+
+    <script>
+        let nsorte = Math.round(Math.random() * 100)
+        console.log(nsorte)
+        let nes = document.getElementById('es')
+        let resposta = document.getElementById('answer')
+        let audio = new Audio ('helicoter.mp3')
+        audio.loop=true
+        function verificar() {
+            console.log(nsorte)
+            console.log(nes.value)
+            if (nes.value == nsorte) {
+                mais.style.display = 'none';
+                menos.style.display = 'none';
+                perfeito.style.display = 'block';
+                audio.play()
+                
+            } else if (nes.value < nsorte) {
+                mais.style.display = 'block';
+                menos.style.display = 'none';
+                perfeito.style.display = 'none';~
+                audio.pause()
+            } else if (nes.value > nsorte) {
+                mais.style.display = 'none';
+                menos.style.display = 'block';
+                perfeito.style.display = 'none';
+                audio.pause()
+            }
+        }
+
+    </script>
+
+    <style>
+        img {
+            width: 20em;
+        }
+    </style>
+
+
+<a href="index.html"><img src="https://marcelosantosarte.com.br/wp-content/uploads/Produtos/Preview/Pintura/10-19-19-Preview-Flores-Aquarela.jpg"></a>
+
+
+</bodY>
+
+</html>
