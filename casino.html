@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="estilos.css" rel="stylesheet" />
+    <title>Casino </title>
+</head>
+
+<body>
+<h1>Oooooh!</h1>
+<h2>Queres tentar a tua sorte?</h2>
+
+<button onclick="sorte()">spin the whell</button>
+<button onclick="stop()">PARAAAAAAA</button>
+
+<p>
+<span id = "n1" class ="bignumber"></span>
+<span id = "n2" class ="bignumber"></span>
+<span id = "n3" class ="bignumber"></span>
+</p>
+
+</body>
+
+<script>
+const n1 = document.getElementById('n1') 
+const n2 = document.getElementById('n2') 
+const n3 = document.getElementById('n3') 
+let timer
+let timeout = 0
+
+function sorte() {
+        const n1 = Math.round(Math.random() * 9)
+        const n2 = Math.round(Math.random() * 9)
+        const n3 = Math.round(Math.random() * 9)
+    
+        n1.innerHTML = n1
+        n1.innerHTML = n1
+        n1.innerHTML = n1
+        timeout = timeout + 25
+
+        if (timeout < 500) {
+        timer = setTimeout(sorte, timeout)
+} else {
+    stop()
+    }
+}
+
+~function para() {
+    cleartimeout(timer)
+}
+</script>
+
+</html>
