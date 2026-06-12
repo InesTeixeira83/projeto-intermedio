@@ -75,3 +75,30 @@ function interacaolivro() {
 
 }
 
+const interaçao = [
+
+    {
+        id: livro,
+        x: 90,
+        y: 30,
+        width: 10,
+        height: 10,
+        name: "livro",
+        type: "Item",
+
+        action: () => {
+            console.log("Ok! Este livro tem aquele alfabeto estranho...")
+
+        }
+
+        sprite: "",
+    }
+
+
+
+
+]
+
+
+
+
