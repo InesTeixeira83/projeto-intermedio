@@ -6,8 +6,15 @@
 <body>
     <h1 class="centered-text">A Carta<sup>tm</sup></h1>
 
-    <canvas id="mycanvas" width="640" height="480"></canvas>
+    <div>
+        <h2 id="loading">A carregar 0%</h2>
+        <progress id="progress" value="0" />
+    </div>
+    <div>
+        <canvas id="mycanvas" width="640" height="480"></canvas>
+    </div>
 
-    <script src="acarta/acarta.js"></script>
+    <script src="acarta/acarta.js" type="module"></script>
 </body>
+
 
